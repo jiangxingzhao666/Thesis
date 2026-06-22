@@ -10,3 +10,10 @@ college: 数学与计算机学院
 major: 计算机科学与技术
 class_info: 2021级计算机1班
 date_range: 2024年9月 — 2025年5月
+
+# ========== 新增 ==========
+abstract: 深度学习技术在图像识别领域取得了突破性进展。本文提出了一种基于改进卷积神经网络的图像识别算法，通过在 ResNet-50 骨干网络中引入通道注意力机制和空间注意力机制，有效提升了特征提取能力。在 CIFAR-100 数据集上的实验结果表明，本文方法取得了 82.5% 的 Top-1 准确率，相比基线模型提升了 6.3 个百分点，验证了所提方法的有效性。
+keywords: 深度学习；图像识别；注意力机制；卷积神经网络
+
+abstract_en: Deep learning has achieved breakthrough progress in the field of image recognition. This paper proposes an image recognition algorithm based on improved convolutional neural networks. By introducing channel attention and spatial attention mechanisms into the ResNet-50 backbone, feature extraction capability is effectively enhanced. Experimental results on the CIFAR-100 dataset show that the proposed method achieves 82.5% Top-1 accuracy, representing a 6.3 percentage point improvement over the baseline model, validating the effectiveness of the approach.
+keywords_en: Deep Learning; Image Recognition; Attention Mechanism; CNN

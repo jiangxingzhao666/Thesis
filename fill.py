@@ -83,7 +83,7 @@ def replace_in_header_footer(doc, info):
 
 def fill(template_path, info, output_path):
     """主函数：读取模板 → 替换 → 保存"""
-    print(f"📄 打开模板：{template_path}")
+    print(f"[打开] 模板：{template_path}")
     doc = Document(template_path)
 
     # 段落
@@ -93,7 +93,7 @@ def fill(template_path, info, output_path):
         replace_in_paragraph(paragraph, info)
         if old != paragraph.text:
             para_count += 1
-    print(f"   ✅ 替换了 {para_count} 个段落")
+    print(f"   [OK] 替换了 {para_count} 个段落")
 
     # 表格
     cell_count = 0
@@ -105,15 +105,15 @@ def fill(template_path, info, output_path):
                     replace_in_paragraph(paragraph, info)
                     if old != paragraph.text:
                         cell_count += 1
-    print(f"   ✅ 替换了 {cell_count} 个表格单元格")
+    print(f"   [OK] 替换了 {cell_count} 个表格单元格")
 
     # 页眉页脚
     replace_in_header_footer(doc, info)
-    print(f"   ✅ 已处理页眉页脚")
+    print(f"   [OK] 已处理页眉页脚")
 
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
     doc.save(output_path)
-    print(f"\n🎉 输出：{output_path}")
+    print(f"\n[完成] 输出：{output_path}")
     print(f"   用 Word 打开即可查看替换结果")
 
 
@@ -123,3 +123,4 @@ def fill(template_path, info, output_path):
 
 if __name__ == "__main__":
     fill("template.docx", INFO, "output/毕业论文_封面.docx")
+    fill("template_2.docx", INFO, "output/毕业论文_摘要.docx")
